@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule Sua Festa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calcule Sua Festa</h1>
+    <section>
+        <h2>Insira os detalhes</h2>
+        <input type="number" id="pessoas" placeholder="Número de pessoas" min="1">
+        <input type="number" id="horas" placeholder="Duração da festa (em horas)" min="1">
+        <button onclick="mostrarResultados()">Calcular</button>
+    </section>
+    
+    <section class="resultados-pesquisa" id="resultados">
+        <!-- Resultados serão exibidos aqui -->
+    </section>
+    
+    <footer>
+        <p>Projeto desenvolvido por Gilnei Laurindo</p>
+    </footer>
+    <script src="dados.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
