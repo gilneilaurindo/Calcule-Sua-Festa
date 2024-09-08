@@ -13,7 +13,7 @@ function mostrarResultados() {
         <h3>Resultados para ${pessoas} pessoas e ${horas} horas de festa:</h3>
         <ul>
             <li><strong>Carne:</strong> ${resultados.carne} kg</li>
-            <li><strong>Bebidas Alcoólicas:</strong> ${resultados.bebidas} latas/copos</li>
+            <li><strong>Bebidas Alcoólicas:</strong> ${resultados.bebidasAlcoolicas} latas/copos</li>
             <li><strong>Refrigerantes:</strong> ${resultados.refrigerantes} litros</li>
             <li><strong>Água:</strong> ${resultados.agua} litros</li>
             <li><strong>Arroz:</strong> ${resultados.arroz} kg</li>
@@ -30,7 +30,7 @@ function mostrarResultados() {
 
 function calcularConsumo(pessoas, horas) {
     const carne = (dados.alimentos.carne.quantidadePorPessoa * pessoas).toFixed(2);
-    const bebidas = (dados.alimentos.bebidas.quantidadePorPessoa * pessoas * horas).toFixed(2);
+    const bebidasAlcoolicas = (dados.alimentos.bebidasAlcoolicas.quantidadePorPessoa * pessoas * horas).toFixed(2);
     const refrigerantes = (dados.alimentos.refrigerantes.quantidadePorPessoa * pessoas).toFixed(2);
     const agua = (dados.alimentos.agua.quantidadePorPessoa * pessoas).toFixed(2);
     const arroz = (dados.alimentos.arroz.quantidadePorPessoa * pessoas).toFixed(2);
@@ -40,10 +40,10 @@ function calcularConsumo(pessoas, horas) {
     const doces = (dados.alimentos.doces.quantidadePorPessoa * pessoas).toFixed(0);
     const salgados = (dados.alimentos.salgados.quantidadePorPessoa * pessoas).toFixed(0);
 
-    const mesas = Math.ceil(dados.organizacao.mesas.quantidadePorPessoa * pessoas);
+    const mesas = Math.ceil(pessoas / 4); // 1 mesa para cada 4 pessoas
     const cadeiras = Math.ceil(dados.organizacao.cadeiras.quantidadePorPessoa * pessoas);
 
     return {
-        carne, bebidas, refrigerantes, agua, arroz, farofa, vinagrete, salada, doces, salgados, mesas, cadeiras
+        carne, bebidasAlcoolicas, refrigerantes, agua, arroz, farofa, vinagrete, salada, doces, salgados, mesas, cadeiras
     };
 }
