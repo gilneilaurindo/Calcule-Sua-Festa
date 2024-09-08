@@ -2,9 +2,9 @@ const dados = {
     alimentos: {
         carne: {
             descricao: "Carne para churrasco",
-            quantidadePorPessoa: 0.4 // em kg
+            quantidadePorPessoa: 0.3 // em kg
         },
-        bebidas: {
+        bebidasAlcoolicas: {
             descricao: "Bebidas alcoólicas",
             quantidadePorPessoa: 2 // latas/copos por hora
         },
@@ -30,11 +30,11 @@ const dados = {
         },
         salada: {
             descricao: "Salada",
-            quantidadePorPessoa: 0.2 // em kg
+            quantidadePorPessoa: 0.15 // em kg
         },
         doces: {
             descricao: "Doces típicos",
-            quantidadePorPessoa: 4 // unidades
+            quantidadePorPessoa: 6 // unidades
         },
         salgados: {
             descricao: "Salgados típicos",
@@ -44,7 +44,7 @@ const dados = {
     organizacao: {
         mesas: {
             descricao: "Mesas",
-            quantidadePorPessoa: 0.1 // 1 mesa para cada 10 pessoas
+            quantidadePorPessoa: 0.25 // 1 mesa para cada 4 pessoas
         },
         cadeiras: {
             descricao: "Cadeiras",
